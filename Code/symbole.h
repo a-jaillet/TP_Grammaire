@@ -27,7 +27,6 @@ class Entier : public Symbole {
       int valeur;
 };
 
-
 class Expr : public Symbole {
    public:
       Expr(int v) : Symbole(EXPR), valeur(v) { }
