@@ -3,10 +3,10 @@
 
 bool E9::transition(Automate * a, Symbole * s){
 	
-	switch(*s){
-		case FIN:
-			a->reduction(3,s);
-			break;
-	}
+	a->popAndDestroySymbol();
+	Expr *e1 = (Expr*) a->popSymbol();
+	a->popAndDestroySymbol();
+	Expr* value = new Expr(e1->getValeur());
+	a->reduction(3,value);
 	return true;
 }
