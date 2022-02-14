@@ -1,10 +1,10 @@
 #include <iostream>
 #include "lexer.h"
-
+#include "e0.h"
 
 int main(void) {
 	string name = "joris";
-	E4 etat(name);
+	E0 etat(name);
 	etat.print();
    /* string chaine("(1+34)*123");
 

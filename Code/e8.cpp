@@ -1,7 +1,7 @@
-#include "e4.h"
+#include "e8.h"
 #include <string>
 
-bool E4::transition(Automate * a, Symbole * s){
+bool E8::transition(Automate * a, Symbole * s){
 	
 	/* switch(*s){
 		case EXPR:
