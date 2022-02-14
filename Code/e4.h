@@ -7,7 +7,6 @@
 #include "e3.h"
 #include "e2.h"
 
-
 class E4 : public Etat{
 	public:
 		E4 (const string & name):Etat(name){}
