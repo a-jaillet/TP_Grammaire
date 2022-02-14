@@ -3,7 +3,6 @@
 #define Etat_H
 
 #include "symbole.h"
-
 #include <iostream>
 #include <string>
 
@@ -21,7 +20,7 @@ public:
 
     Etat (const string & Name);
 
-    virtual ~Etat ( ){};
+    virtual ~Etat ();
 	
 	void print() const;
 	
