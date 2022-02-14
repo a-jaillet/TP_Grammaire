@@ -2,8 +2,11 @@
 #define ETAT_1
 
 #include "etat.h"
+#include "automate.h"
 
-class Etat1 : public Etat {
+class E1 : public Etat {
+    public:
+    E1 (const string& name):Etat(name){}
     virtual bool transition(Automate * unAutomate, Symbole * s);
 };
 
