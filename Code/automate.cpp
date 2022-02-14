@@ -13,3 +13,11 @@ void Automate::reduction(int n, Symbole *s){
 	}
 	pileEtat.top()->transition(this,s);
 }
+
+void Automate::popState() {
+	pileEtat.pop();
+}
+
+void Automate::popSymbol() {
+	pileSymbole.pop();
+}

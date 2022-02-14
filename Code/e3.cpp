@@ -2,10 +2,11 @@
 
 bool E3::transition(Automate * a, Symbole * s){
 	
-	// switch(*s){
-	// 	case EXPR:
-	// 		a->decalage(s, new E7
-	// }
+	switch(*s) {
+		case FIN: 
+			a->reduction(1,s);
+			break;
+	}
 
-	return true;
+	return false;
 }

@@ -25,7 +25,8 @@ public:
 	void decalage(Symbole *s, Etat * e);
 	
 	void reduction(int n, Symbole *s);
-
+	void popState();
+	void popSymbol();
 };
 
 #endif // AUTOMATE_H
