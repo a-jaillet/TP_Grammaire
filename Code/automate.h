@@ -11,6 +11,8 @@ class Automate
 {
 protected:
 	stack<Etat> pileEtat;
+	
+	stack<Symbole> pileSymbole;
 
 public:
 
@@ -18,7 +20,9 @@ public:
 
     virtual ~Automate ( );
 	
-	virtu
+	void decalage(Symbole *s, Etat * e);
+	
+	void reduction(Symbole *s, Etat *e);
 
 };
 

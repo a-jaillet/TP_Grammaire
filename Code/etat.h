@@ -2,13 +2,14 @@
 #if ! defined ( Etat_H )
 #define Etat_H
 
-#include "automate.h"
 #include "symbole.h"
 
 #include <iostream>
 #include <string>
 
 using namespace std;
+
+class Automate;
 
 class Etat 
 {
