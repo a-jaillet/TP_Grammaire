@@ -25,8 +25,7 @@ public:
 	
 	void print() const;
 	
-	virtual bool transition(Automate & unAutomate, Symbole * s)=0;
+	virtual bool transition(Automate * unAutomate, Symbole * s)=0;
 
 };
-
 #endif // Etat_H

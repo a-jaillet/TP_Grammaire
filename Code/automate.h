@@ -5,14 +5,16 @@
 #include <iostream>
 #include <stack>
 
+#include "etat.h"
+
 using namespace std;
 
 class Automate 
 {
 protected:
-	stack<Etat> pileEtat;
+	stack<*Etat> pileEtat;
 	
-	stack<Symbole> pileSymbole;
+	stack<*Symbole> pileSymbole;
 
 public:
 
