@@ -1,3 +1,5 @@
+#include "e7.h"
+
 bool E7::transition(Automate * a, Symbole * s){
 	
 	 switch(*s){
