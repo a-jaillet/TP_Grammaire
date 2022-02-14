@@ -31,6 +31,7 @@ class Expr : public Symbole {
    public:
       Expr(int v) : Symbole(EXPR), valeur(v) { }
       ~Expr() { }
+	  int getValeur(){return valeur);
       virtual void Affiche();
    protected:
       int valeur;

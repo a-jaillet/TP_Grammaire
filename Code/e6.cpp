@@ -1,7 +1,7 @@
 #include "e5.h"
 #include <string>
 
-bool E5::transition(Automate * a, Symbole * s){
+bool E6::transition(Automate * a, Symbole * s){
 	
 	 switch(*s){
 		case PLUS:

@@ -7,6 +7,5 @@ bool E3::transition(Automate * a, Symbole * s){
 			a->reduction(1,s);
 			break;
 	}
-
 	return false;
 }
