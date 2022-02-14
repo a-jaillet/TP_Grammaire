@@ -3,6 +3,9 @@
 #include <string>
 #include "automate.h"
 #include "etat.h"
+#include "e7.h"
+#include "e3.h"
+#include "e2.h"
 
 class E4 : public Etat{
 	public:
