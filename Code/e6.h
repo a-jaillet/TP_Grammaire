@@ -2,6 +2,9 @@
 #define E6_H
 #include <string>
 #include "etat.h"
+#include "e4.h"
+#include "e5.h"
+#include "e9.h"
 
 class E6 : public Etat{
 	public:
