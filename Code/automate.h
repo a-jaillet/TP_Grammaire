@@ -6,6 +6,7 @@
 #include <stack>
 
 #include "etat.h"
+#include "lexer.h"
 #include "symbole.h"
 
 using namespace std;
@@ -16,10 +17,12 @@ protected:
 	stack<Etat *> pileEtat;
 	
 	stack<Symbole *> pileSymbole;
+	
+	Lexer lexer;
 
 public:
 
-    Automate ();
+    Automate (const Lexer & UnLexer):lexer(unLexer){}
     virtual ~Automate ();
 	
 	void decalage(Symbole *s, Etat * e);
