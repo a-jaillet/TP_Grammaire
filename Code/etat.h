@@ -4,7 +4,6 @@
 
 #include "automate.h"
 #include "symbole.h"
-
 #include <iostream>
 #include <string>
 

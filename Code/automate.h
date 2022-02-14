@@ -14,11 +14,9 @@ protected:
 
 public:
 
-    Automate ( );
-
-    virtual ~Automate ( );
+    Automate ();
+    virtual ~Automate ();
 	
-	virtu
 
 };
 
