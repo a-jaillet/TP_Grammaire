@@ -36,4 +36,3 @@ class Expr : public Symbole {
    protected:
       int valeur;
 };
-
