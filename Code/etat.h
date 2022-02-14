@@ -20,7 +20,7 @@ public:
 
     Etat (const string & name);
 
-    virtual ~Etat ( );
+    virtual ~Etat ();
 	
 	void print() const;
 	
