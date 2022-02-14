@@ -6,15 +6,16 @@
 #include <stack>
 
 #include "etat.h"
+#include "symbole.h"
 
 using namespace std;
 
 class Automate 
 {
 protected:
-	stack<*Etat> pileEtat;
+	stack<Etat *> pileEtat;
 	
-	stack<*Symbole> pileSymbole;
+	stack<Symbole *> pileSymbole;
 
 public:
 
@@ -24,7 +25,7 @@ public:
 	
 	void decalage(Symbole *s, Etat * e);
 	
-	void reduction(Symbole *s, Etat *e);
+	void reduction(int n, Symbole *s);
 
 };
 

@@ -1,14 +1,14 @@
 #include "automate.h"
 
 void Automate::decalage(Symbole *s, Etat *e){
-	pileSymbole.pushback(s);
-	pileEtat.pushback(e);
+	pileSymbole.push(s);
+	pileEtat.push(e);
 }
 
 void Automate::reduction(int n, Symbole *s){
 	for(int i=0;i<n;i++){
-		delete(pileEtat.back());
-		pileEtat.pop_back();
+		delete(pileEtat.top());
+		pileEtat.pop();
 	}
-	pileEtat.back()->transition(*this,s);
+	pileEtat.top()->transition(this,s);
 }
