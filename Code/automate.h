@@ -26,7 +26,8 @@ public:
 	
 	void reduction(int n, Symbole *s);
 	void popState();
-	void popSymbol();
+	Symbole* popSymbol();
+	void popAndDestroySymbol();
 };
 
 #endif // AUTOMATE_H

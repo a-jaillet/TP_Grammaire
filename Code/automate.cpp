@@ -18,6 +18,13 @@ void Automate::popState() {
 	pileEtat.pop();
 }
 
-void Automate::popSymbol() {
+Symbole* Automate::popSymbol() {
+	Symbole* s = pileSymbole.top();
+	pileSymbole.pop();
+	return s;
+}
+
+void Automate::popAndDestroySymbol() {
+	delete(pileSymbole.top());
 	pileSymbole.pop();
 }
