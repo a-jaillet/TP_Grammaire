@@ -1,15 +1,20 @@
 #include "e4.h"
 #include <string>
 
-int main(){
-	
-}
-
 bool E4::transition(Automate * a, Symbole * s){
 	
-	/* switch(*s){
+	switch(*s){
 		case EXPR:
-			a->decalage(s, new E7
-	} */
-	return true;
+			a->decalage(s, new E7("etat7"));
+			break;
+			
+		case INT:
+			a->decalage(s,new E3("etat3"));
+			break;
+			
+		case OPENPAR:
+			a->decalage(s,new E2("etat2"));
+			break;
+	}
+	return false;
 }
