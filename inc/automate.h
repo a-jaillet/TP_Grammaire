@@ -22,7 +22,7 @@ protected:
 
 public:
 
-    Automate (const Lexer & UnLexer):lexer(unLexer){}
+    Automate (const Lexer & unLexer):lexer(unLexer){}
     virtual ~Automate ();
 	
 	void decalage(Symbole *s, Etat * e);

@@ -1,6 +1,5 @@
-#ifndef E_1
-#define E_1
-
+#if ! defined ( E1_H )
+#define E1_H
 #include "etat.h"
 #include "e4.h"
 #include "e5.h"

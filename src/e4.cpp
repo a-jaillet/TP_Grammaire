@@ -1,5 +1,4 @@
 #include "e4.h"
-#include <string>
 
 bool E4::transition(Automate * a, Symbole * s){
 	
