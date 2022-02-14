@@ -2,12 +2,13 @@
 #if ! defined ( Etat_H )
 #define Etat_H
 
-#include "automate.h"
 #include "symbole.h"
 #include <iostream>
 #include <string>
 
 using namespace std;
+
+class Automate;
 
 class Etat 
 {
@@ -23,8 +24,7 @@ public:
 	
 	void print() const;
 	
-	virtual bool transition(Automate & unAutomate, Symbole * s)=0;
+	virtual bool transition(Automate * unAutomate, Symbole * s)=0;
 
 };
-
 #endif // Etat_H

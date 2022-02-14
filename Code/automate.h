@@ -5,18 +5,26 @@
 #include <iostream>
 #include <stack>
 
+#include "etat.h"
+#include "symbole.h"
+
 using namespace std;
 
 class Automate 
 {
 protected:
-	stack<Etat> pileEtat;
+	stack<Etat *> pileEtat;
+	
+	stack<Symbole *> pileSymbole;
 
 public:
 
     Automate ();
     virtual ~Automate ();
 	
+	void decalage(Symbole *s, Etat * e);
+	
+	void reduction(int n, Symbole *s);
 
 };
 
