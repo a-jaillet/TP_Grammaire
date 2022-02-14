@@ -9,6 +9,9 @@ bool E1::transition(Automate* unAutomate, Symbole* s) {
             case MULT: 
                 unAutomate->decalage(s, new E5("etat5"));
                 break;
+            case FIN: 
+                unAutomate->reduction(1, s);
+                break;
         }
 
         return false;

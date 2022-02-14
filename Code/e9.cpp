@@ -3,9 +3,10 @@
 
 bool E9::transition(Automate * a, Symbole * s){
 	
-	/* switch(*s){
-		case EXPR:
-			a->decalage(s, new E7
-	} */
+	switch(*s){
+		case FIN:
+			a->reduction(3,s);
+			break;
+	}
 	return true;
 }
