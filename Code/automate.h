@@ -19,7 +19,7 @@ protected:
 
 public:
 
-    //Automate ();
+    Automate ();
     virtual ~Automate ();
 	
 	void decalage(Symbole *s, Etat * e);
