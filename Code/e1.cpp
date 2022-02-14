@@ -1,11 +1,15 @@
 #include "e1.h"
 
-bool E1::transition(Automate * a, Symbole * s){
-	
-	// switch(*s){
-	// 	case EXPR:
-	// 		a->decalage(s, new E7
-	// }
+bool E1::transition(Automate* unAutomate, Symbole* s) {
 
-	return true;
+        switch(*s) {
+            case PLUS:
+                unAutomate->decalage(s, new E4("etat4"));
+                break;
+            case MULT: 
+                unAutomate->decalage(s, new E5("etat5"));
+                break;
+        }
+
+        return false;
 }
