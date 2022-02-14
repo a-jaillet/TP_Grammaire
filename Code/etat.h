@@ -18,7 +18,7 @@ protected:
 
 public:
 
-    Etat (const string & name);
+    Etat (const string & Name);
 
     virtual ~Etat ();
 	
