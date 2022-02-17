@@ -2,27 +2,13 @@
 #include "lexer.h"
 #include "automate.h"
 int main(void) {
-   string chaine("10+3");
+   string chaine("(1+34)*123*((2+15)*5)");
 
    Lexer l(chaine);
 
-   // Symbole * s;
-   // while(*(s=l.Consulter())!=FIN) {
-   //    s->Affiche();
-   //    cout<<endl;
-   //    l.Avancer();
-   // }
-   // return 0;
-
    Automate * automate = new Automate(l);
-   automate->execute();
-   Expr* lastSymbole = (Expr *) automate->popSymbol();
-   cout << lastSymbole->getValeur() << endl;
-
-   // Etat* etat = automate->popState();
-   // etat->print();
-   // etat = automate->popState();
-   // etat->print();
+   int res = automate->execute();
+   cout << res << endl;
    return 0;
 }
 

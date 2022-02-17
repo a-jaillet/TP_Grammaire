@@ -27,7 +27,7 @@ public:
 	
 	void decalage(Symbole *s, Etat * e);
 	
-	void execute();
+	int execute();
 	void reduction(int n, Symbole *s);
 	Etat* popState();
 	Symbole* popSymbol();

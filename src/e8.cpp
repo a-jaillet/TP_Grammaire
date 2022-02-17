@@ -16,6 +16,7 @@ bool E8::transition(Automate * a, Symbole * s){
             a->popAndDestroySymbol();
             Expr * s2 = (Expr *) a->popSymbol();
             Expr * s3 = new Expr(s1->getValeur() * s2->getValeur());
+            cout << s1->getValeur() << "*" << s2->getValeur() << "=" << s3->getValeur() << endl;
             a->reduction(3, s3);
             return true;
 			break;

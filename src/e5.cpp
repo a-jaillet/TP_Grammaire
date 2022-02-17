@@ -10,6 +10,9 @@ bool E5::transition(Automate * a, Symbole * s){
 		case OPENPAR:
 			a->decalage(s,new E2("etat2"));
 			break;
+		case INT:
+			a->decalage(s,new E3("etat3"));
+			break;
 	 } 
 	return false;
 }

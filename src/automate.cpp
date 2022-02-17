@@ -32,22 +32,24 @@ void Automate::popAndDestroySymbol() {
 	pileSymbole.pop();
 }
 
-void Automate::execute() {
+int Automate::execute() {
 	Symbole * s;
 	E0 * etatInitial = new E0("etat0");
 
 	pileEtat.push(etatInitial);
-
+	int res = 0;
     while(*(s=lexer.Consulter())!=FIN || pileEtat.size()>1) {
-       Etat * etatCourant = pileEtat.top();
-	   if (!etatCourant->transition(this, s))
-	   {	
+        Etat * etatCourant = pileEtat.top();
+	    if (!etatCourant->transition(this, s))
+	    {	
 			lexer.Avancer();
-	   }
-	   else if (*s == FIN)
-	   {
-		   etatCourant->print();
-		   break;
-	   }
+	   	}
+		if (pileEtat.size() == 2)
+		{
+			Expr* lastSymbole = (Expr *) pileSymbole.top();
+   			res = lastSymbole->getValeur();
+		}
    	}
+
+	return res;
 }
