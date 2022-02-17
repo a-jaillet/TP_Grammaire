@@ -2,7 +2,7 @@
 #include "lexer.h"
 #include "automate.h"
 int main(void) {
-   string chaine("0+2");
+   string chaine("10+3");
 
    Lexer l(chaine);
 
@@ -18,6 +18,11 @@ int main(void) {
    automate->execute();
    Expr* lastSymbole = (Expr *) automate->popSymbol();
    cout << lastSymbole->getValeur() << endl;
+
+   // Etat* etat = automate->popState();
+   // etat->print();
+   // etat = automate->popState();
+   // etat->print();
    return 0;
 }
 

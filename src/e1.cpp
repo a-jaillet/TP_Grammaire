@@ -11,7 +11,8 @@ bool E1::transition(Automate* unAutomate, Symbole* s) {
                 break;
             default: 
                 Expr * e = (Expr*) unAutomate->popSymbol();
-                unAutomate->reduction(1, e);
+                unAutomate->reduction(1, s);
+                return true;
                 break;
         }
 

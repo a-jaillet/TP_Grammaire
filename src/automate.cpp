@@ -15,8 +15,10 @@ void Automate::reduction(int n, Symbole *s){
 	pileEtat.top()->transition(this,s);
 }
 
-void Automate::popState() {
+Etat* Automate::popState() {
+	Etat* e = pileEtat.top();
 	pileEtat.pop();
+	return e;
 }
 
 Symbole* Automate::popSymbol() {
@@ -36,10 +38,16 @@ void Automate::execute() {
 
 	pileEtat.push(etatInitial);
 
-    while(*(s=lexer.Consulter())!=FIN) {
+    while(*(s=lexer.Consulter())!=FIN || pileEtat.size()>1) {
        Etat * etatCourant = pileEtat.top();
-	   etatCourant->print();
-	   etatCourant->transition(this, s);
-	   lexer.Avancer();
+	   if (!etatCourant->transition(this, s))
+	   {	
+			lexer.Avancer();
+	   }
+	   else if (*s == FIN)
+	   {
+		   etatCourant->print();
+		   break;
+	   }
    	}
 }
