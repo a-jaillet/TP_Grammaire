@@ -1,5 +1,6 @@
 #include "automate.h"
-
+#include "e0.h"
+#include "etat.h"
 
 void Automate::decalage(Symbole *s, Etat *e){
 	pileSymbole.push(s);
@@ -27,4 +28,18 @@ Symbole* Automate::popSymbol() {
 void Automate::popAndDestroySymbol() {
 	delete(pileSymbole.top());
 	pileSymbole.pop();
+}
+
+void Automate::execute() {
+	Symbole * s;
+	E0 * etatInitial = new E0("etat0");
+
+	pileEtat.push(etatInitial);
+
+    while(*(s=lexer.Consulter())!=FIN) {
+       Etat * etatCourant = pileEtat.top();
+	   etatCourant->print();
+	   etatCourant->transition(this, s);
+	   lexer.Avancer();
+   	}
 }

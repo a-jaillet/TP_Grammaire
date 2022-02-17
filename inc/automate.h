@@ -23,10 +23,12 @@ protected:
 public:
 
     Automate (const Lexer & unLexer):lexer(unLexer){}
-    virtual ~Automate ();
+    virtual ~Automate (){}
 	
 	void decalage(Symbole *s, Etat * e);
 	
+	void execute();
+
 	void reduction(int n, Symbole *s);
 	void popState();
 	Symbole* popSymbol();

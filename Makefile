@@ -13,7 +13,7 @@ OBJ=$(subst $(SRC_DIR),$(OBJ_DIR),$(SRC:.cpp=.o))
 
 all: $(EXEC)
 
-exe: $(OBJ)
+$(EXEC): $(OBJ)
 	@$(CC) -o $(BIN_DIR)/$@ $^ $(LDFLAGS)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
