@@ -3,7 +3,7 @@
 #include "automate.h"
 int main(void) {
    //string chaine("(1+34)*123*((2+15)*5)");
-   string chaine("3+-");
+   string chaine("5*4");
 
    Lexer l(chaine);
 
@@ -14,6 +14,9 @@ int main(void) {
    }catch(int ex){
 	   cout<<chaine<<" n'est pas une formule valide"<<endl;
    }
+   
+   //int res = automate->execute();
+	//cout << res << endl;
    return 0;
 }
 

@@ -15,7 +15,8 @@ bool E4::transition(Automate * a, Symbole * s){
 			a->decalage(s,new E2("etat2"));
 			break;
 		default:
-			throw 20;
+			throw -1;
+			break;
 	}
 	return false;
 }
