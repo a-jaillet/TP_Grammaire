@@ -16,7 +16,7 @@ bool E7::transition(Automate * a, Symbole * s){
 			a->popAndDestroySymbol();
 			Expr *s2 = (Expr*) a->popSymbol();
 			Expr *sum = new Expr(s1->getValeur()+s2->getValeur());
-			cout << s1->getValeur() << "+" << s2->getValeur() << "=" << sum->getValeur() << endl;
+			//cout << s1->getValeur() << "+" << s2->getValeur() << "=" << sum->getValeur() << endl;
 			a->reduction(3,sum);
 			return true;
 			break;

@@ -10,7 +10,7 @@ bool E1::transition(Automate* unAutomate, Symbole* s) {
                 unAutomate->decalage(s, new E5("etat5"));
                 break;
             default: 
-                Expr * e = (Expr*) unAutomate->popSymbol();
+				unAutomate->popSymbol();
                 unAutomate->reduction(1, s);
                 return true;
                 break;

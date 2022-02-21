@@ -12,6 +12,8 @@ bool E2::transition(Automate * a, Symbole * s){
         case EXPR:
             a -> decalage(s, new E6("etat6"));
 			break;
+		default:
+			throw -1;
 	}
 
 	return false;
