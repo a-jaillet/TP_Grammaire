@@ -3,13 +3,13 @@
 bool E8::transition(Automate * a, Symbole * s){
 	
 	switch(*s){
-		case MULT:
-			a->decalage(s, new E5("etat5"));
-			break;
+		// case MULT:
+		// 	a->decalage(s, new E5("etat5"));
+		// 	break;
 			
-        case PLUS:
-            a->decalage(s, new E4("etat4"));
-			break;
+        // case PLUS:
+        //     a->decalage(s, new E4("etat4"));
+		// 	break;
 			
         default:
             Expr * s1 = (Expr *) a->popSymbol();
