@@ -36,20 +36,19 @@ int Automate::execute() {
 	Symbole * s;
 	E0 * etatInitial = new E0("etat0");
 
-	pileEtat.push(etatInitial);
+	pileEtat.push(etatInitial);  //On commence à l'état initial e0
 	int res = 0;
     while(*(s=lexer.Consulter())!=FIN || pileEtat.size()>1) {
 		try{
 			Etat * etatCourant = pileEtat.top();
-			etatCourant->print();
-			if (!etatCourant->transition(this, s))
+			if (!etatCourant->transition(this, s))  //Si la transition donne lieu à un décalage, on lit le prochain symbole
 			{	
 				lexer.Avancer();
 			}
-			if (pileEtat.size() == 2)
+			if (pileEtat.size() == 2)  //Condition d'arrêt
 			{
 				Expr* lastSymbole = (Expr *) pileSymbole.top();
-				res = lastSymbole->getValeur();
+				res = lastSymbole->getValeur(); //Récupère le résulta final
 			}
 		}catch(int ex){
 			throw ex;

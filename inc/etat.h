@@ -11,6 +11,8 @@ using namespace std;
 class Automate;
 
 class Etat 
+//Classe abstraite qui représente un état de l'automate. La méthode transition sera définie pour chacun des états selon le symbole en entrée, les décalages 
+//ou les réductions à effectuer
 {
 protected:
 
