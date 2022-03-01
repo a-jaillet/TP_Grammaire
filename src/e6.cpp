@@ -13,6 +13,8 @@ bool E6::transition(Automate * a, Symbole * s){
 		case MULT:
 			a->decalage(s,new E5("etat5"));
 			break;
+		default:
+			throw -1;
 	 } 
 	return false;
 }

@@ -12,6 +12,10 @@ bool E0::transition(Automate * a, Symbole * s){
         case INT:
             a->decalage(s, new E3("etat3"));
 			break;
+		case FIN:
+			break;
+		default:
+			throw -1;
 	}
 
 	return false;

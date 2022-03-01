@@ -39,15 +39,20 @@ int Automate::execute() {
 	pileEtat.push(etatInitial);
 	int res = 0;
     while(*(s=lexer.Consulter())!=FIN || pileEtat.size()>1) {
-        Etat * etatCourant = pileEtat.top();
-	    if (!etatCourant->transition(this, s))
-	    {	
-			lexer.Avancer();
-	   	}
-		if (pileEtat.size() == 2)
-		{
-			Expr* lastSymbole = (Expr *) pileSymbole.top();
-   			res = lastSymbole->getValeur();
+		try{
+			Etat * etatCourant = pileEtat.top();
+			etatCourant->print();
+			if (!etatCourant->transition(this, s))
+			{	
+				lexer.Avancer();
+			}
+			if (pileEtat.size() == 2)
+			{
+				Expr* lastSymbole = (Expr *) pileSymbole.top();
+				res = lastSymbole->getValeur();
+			}
+		}catch(int ex){
+			throw ex;
 		}
    	}
 
