@@ -2,11 +2,10 @@ CC=g++
 INC_DIR=./inc
 CFLAGS=-W -Wall -I $(INC_DIR)
 LDFLAGS=
-EXEC=main
+EXEC=exe
 
 SRC_DIR=./src
 OBJ_DIR=./obj
-BIN_DIR=./bin
 
 SRC=$(wildcard $(SRC_DIR)/*)
 OBJ=$(subst $(SRC_DIR),$(OBJ_DIR),$(SRC:.cpp=.o))
@@ -14,8 +13,7 @@ OBJ=$(subst $(SRC_DIR),$(OBJ_DIR),$(SRC:.cpp=.o))
 all: $(EXEC)
 
 $(EXEC): $(OBJ)
-	@mkdir -p $(@D) $(BIN_DIR)
-	@$(CC) -o $(BIN_DIR)/$@ $^ $(LDFLAGS)
+	@$(CC) -o $@ $^ $(LDFLAGS)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
 	@mkdir -p $(@D) $(OBJ_DIR)
@@ -27,4 +25,4 @@ clean:
 	@rm -rf $(OBJ_DIR)
 	
 mrproper: clean
-	@rm -rf $(BIN_DIR)
+	@rm -f $(EXEC)
