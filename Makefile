@@ -1,6 +1,6 @@
 CC=g++
 INC_DIR=./inc
-CFLAGS=-W -Wall -I $(INC_DIR)
+CFLAGS=-W -I $(INC_DIR)
 LDFLAGS=
 EXEC=exe
 
