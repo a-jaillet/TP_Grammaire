@@ -1,5 +1,4 @@
 #include "e5.h"
-#include <string>
 
 bool E5::transition(Automate * a, Symbole * s){
 	

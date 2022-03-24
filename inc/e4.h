@@ -1,6 +1,5 @@
 #if ! defined ( E4_H )
 #define E4_H
-#include <string>
 #include "etat.h"
 #include "e7.h"
 #include "e3.h"
