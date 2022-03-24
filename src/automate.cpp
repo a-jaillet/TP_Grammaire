@@ -53,6 +53,6 @@ int Automate::execute() {
 			throw ex;
 		}
    	}
-
+	delete(etatInitial);
 	return res;
 }
