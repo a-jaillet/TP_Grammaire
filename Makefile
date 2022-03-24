@@ -14,15 +14,17 @@ OBJ=$(subst $(SRC_DIR),$(OBJ_DIR),$(SRC:.cpp=.o))
 all: $(EXEC)
 
 $(EXEC): $(OBJ)
+	@mkdir -p $(@D) $(BIN_DIR)
 	@$(CC) -o $(BIN_DIR)/$@ $^ $(LDFLAGS)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
+	@mkdir -p $(@D) $(OBJ_DIR)
 	@$(CC) -o $@ -c $< $(CFLAGS)
 
 .PHONY: clean mrproper
 	
 clean:
-	@rm -rf $(OBJ_DIR)/*
+	@rm -rf $(OBJ_DIR)
 	
 mrproper: clean
-	@rm -rf $(BIN_DIR)/*
+	@rm -rf $(BIN_DIR)
