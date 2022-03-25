@@ -1,8 +1,8 @@
 CC=g++
 INC_DIR=./inc
 CFLAGS=-W -I $(INC_DIR)
-LDFLAGS= -g -O0 # memcheck valgrind
-#LDFLAGS=
+#LDFLAGS= -g -O0 # memcheck valgrind
+LDFLAGS=
 EXEC=exe
 
 SRC_DIR=./src
